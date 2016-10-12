@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161013 01:29:19.127" generator="Robot 3.0 (Python 2.7.12 on darwin)">
+<suite source="/Users/MUKKII/Documents/GIT/DEMO_ROBOT_SHOPPINGCART/Main/Main_shoppingCart.robot" id="s1" name="Main shoppingCart">
+<test id="s1-t1" name="ลูกค้าค้นหาสินค้า">
+<kw name="เปิดหน้าเว็บไซต์ lazada.co.th">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.lazada.co.th/</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20161013 01:29:19.214" level="INFO">Opening browser 'gc' to base url 'http://www.lazada.co.th/'</msg>
+<status status="PASS" endtime="20161013 01:29:29.330" starttime="20161013 01:29:19.214"></status>
+</kw>
+<status status="PASS" endtime="20161013 01:29:29.331" starttime="20161013 01:29:19.214"></status>
+</kw>
+<kw name="ค้นหาสินค้า">
+<arguments>
+<arg>iphone6s</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id = searchInput</arg>
+<arg>${ชื่อสินค้า}</arg>
+</arguments>
+<msg timestamp="20161013 01:29:29.332" level="INFO">Typing text 'iphone6s' into text field 'id = searchInput'</msg>
+<status status="PASS" endtime="20161013 01:29:29.446" starttime="20161013 01:29:29.332"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id = searchSubmit</arg>
+</arguments>
+<msg timestamp="20161013 01:29:29.446" level="INFO">Clicking button 'id = searchSubmit'.</msg>
+<status status="PASS" endtime="20161013 01:29:35.139" starttime="20161013 01:29:29.446"></status>
+</kw>
+<status status="PASS" endtime="20161013 01:29:35.139" starttime="20161013 01:29:29.331"></status>
+</kw>
+<kw name="ลูกค้าจะเห็นผลการค้าหา iphone6s">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>iphone6s - ซื้อ iphone6s ในราคาถูกที่สุดใน Thailand | www.lazada.co.th</arg>
+</arguments>
+<msg timestamp="20161013 01:29:35.148" level="INFO">Page title is 'iphone6s - ซื้อ iphone6s ในราคาถูกที่สุดใน Thailand | www.lazada.co.th'.</msg>
+<status status="PASS" endtime="20161013 01:29:35.148" starttime="20161013 01:29:35.140"></status>
+</kw>
+<status status="PASS" endtime="20161013 01:29:35.148" starttime="20161013 01:29:35.140"></status>
+</kw>
+<kw name="กดเลือกสินค้า">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath = /html/body/div[3]/div[1]/div[2]/div/div[2]/div[1]</arg>
+</arguments>
+<msg timestamp="20161013 01:29:35.149" level="INFO">Clicking element 'xpath = /html/body/div[3]/div[1]/div[2]/div/div[2]/div[1]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161013 01:29:35.449" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161013 01:29:35.449" starttime="20161013 01:29:35.170"></status>
+</kw>
+<msg timestamp="20161013 01:29:35.451" level="FAIL">ValueError: Element locator 'xpath = /html/body/div[3]/div[1]/div[2]/div/div[2]/div[1]' did not match any elements.</msg>
+<status status="FAIL" endtime="20161013 01:29:35.451" starttime="20161013 01:29:35.149"></status>
+</kw>
+<status status="FAIL" endtime="20161013 01:29:35.451" starttime="20161013 01:29:35.149"></status>
+</kw>
+<status status="FAIL" endtime="20161013 01:29:35.451" critical="yes" starttime="20161013 01:29:19.212">ValueError: Element locator 'xpath = /html/body/div[3]/div[1]/div[2]/div/div[2]/div[1]' did not match any elements.</status>
+</test>
+<status status="FAIL" endtime="20161013 01:29:35.452" starttime="20161013 01:29:19.129"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Main shoppingCart" pass="0">Main shoppingCart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
